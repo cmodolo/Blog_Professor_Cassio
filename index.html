@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog do Professor Cássio Modolo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Professor Cássio Modolo</h1>
+  <p>Educação Digital • Informática • Programação • Robótica • Geografia</p>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#disciplinas">Disciplinas</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#familia">Família</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <button id="tema">🌙 Modo Escuro</button>
+</header>
+
+<section class="banner">
+  <h2>Bem-vindo ao meu blog!</h2>
+  <p>Este blog foi desenvolvido como exemplo para meus alunos do 1º ano do Ensino Médio.</p>
+</section>
+
+<main>
+
+<section id="sobre" class="card">
+<h2>Quem sou eu?</h2>
+<p>Sou professor de Educação Digital no Ensino Médio e também leciono Informática, Programação e Robótica para o Ensino Fundamental. Minha formação é em Geografia e adoro trabalhar com tecnologia e educação.</p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</section>
+
+<section id="disciplinas" class="card">
+<h2>Disciplinas que leciono</h2>
+<div class="grid">
+<div><h3>💻 Informática</h3><p>Conhecimentos básicos e ferramentas digitais.</p></div>
+<div><h3>👨‍💻 Programação</h3><p>HTML, CSS, JavaScript e lógica.</p></div>
+<div><h3>🤖 Robótica</h3><p>Arduino, ESP32 e projetos tecnológicos.</p></div>
+<div><h3>🌎 Geografia</h3><p>Minha formação e paixão pelo ensino.</p></div>
+</div>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</section>
+
+<section id="hobbies" class="card">
+<h2>Meus hobbies</h2>
+<ul>
+<li>🏓 Jogar tênis de mesa com os alunos.</li>
+<li>📚 Gosto muito do ambiente escolar.</li>
+<li>🃏 Trocar figurinhas.</li>
+<li>⚽ Torcedor do Flamengo.</li>
+<li>🇧🇷 Torço para que o Brasil conquiste o hexa.</li>
+</ul>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</section>
+
+<section id="familia" class="card">
+<h2>Minha família</h2>
+<p>Sou casado com a enfermeira Mari Cazzo e pai da Laura, de 7 anos, que amo muito.</p>
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</section>
+
+<section id="contato" class="card">
+<h2>Contato</h2>
+<form>
+<input type="text" placeholder="Seu nome">
+<input type="email" placeholder="Seu e-mail">
+<textarea placeholder="Sua mensagem"></textarea>
+<button type="submit">Enviar</button>
+</form>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 - Blog do Professor Cássio Modolo</p>
+<button id="topo">⬆ Voltar ao topo</button>
+</footer>
+
+<script>
+// Contador de likes
+document.querySelectorAll("button").forEach(btn=>{
+ if(btn.querySelector("span")){
+   let ativo=false;
+   btn.addEventListener("click",()=>{
+      const s=btn.querySelector("span");
+      s.textContent=ativo?Number(s.textContent)-1:Number(s.textContent)+1;
+      ativo=!ativo;
+   });
+ }
+});
+
+// Tema
+const tema=document.getElementById("tema");
+tema.onclick=()=>document.body.classList.toggle("dark");
+
+// Topo
+document.getElementById("topo").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+</script>
+
+</body>
+</html>

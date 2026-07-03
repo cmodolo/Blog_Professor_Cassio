@@ -1,0 +1,22 @@
+/* ======== CONFIGURAÇÕES GERAIS ======== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#eef2f7;color:#183C63;transition:.3s}
+header{background:#183C63;color:#fff;text-align:center;padding:30px}
+nav{margin:20px 0}
+nav a{color:#fff;text-decoration:none;margin:0 10px;font-weight:bold}
+.banner{background:#2d5b8b;color:#fff;padding:40px;text-align:center}
+main{max-width:1000px;margin:auto;padding:20px}
+.card{background:#fff;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.15)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:15px}
+.grid div{background:#f5f5f5;padding:15px;border-radius:8px}
+button{margin-top:15px;padding:10px 15px;border:none;border-radius:8px;background:#183C63;color:#fff;cursor:pointer}
+button:hover{transform:scale(1.05)}
+input,textarea{width:100%;padding:10px;margin:8px 0}
+footer{text-align:center;padding:30px;background:#183C63;color:#fff;margin-top:30px}
+.dark{background:#121212;color:#eee}
+.dark .card{background:#1e1e1e;color:#eee}
+.dark .grid div{background:#2c2c2c}
+@media(max-width:700px){
+ nav a{display:block;margin:8px 0}
+ .banner{padding:25px}
+}
